@@ -1,4 +1,3 @@
-const dbconfig = require("../config/dbconfig");
 const mysql = require("mysql");
 const db = mysql.createConnection(dbconfig);
 
@@ -42,7 +41,7 @@ exports.isUserExistsByNameAndPhoneNumber = (name, phone) => {
 
 exports.isSocialUserExists = (method, id) => {
   let selectQuery = `SELECT C.id FROM customers as C, customer_sns_credentials WHERE method = "${method}" AND client_id = "${id}"`;
-
+  console.log(id);
   return new Promise((resolve, reject) => {
     db.query(selectQuery, (error, rows) => {
       if (error) reject();
@@ -110,7 +109,7 @@ exports.addSocialUser = async (user) => {
   const agreed = user.agreed;
 
   let insertQuery =
-    "INSERT INTO customers(`name`, `birth_date`, `gender`, `method`, `phone_no`, `role_id`, `verification_id`, `agreed_marketing`)";
+    "INSERT INTO customers(`name`, `birth`, `gender`, `method`, `phone_no`, `role`, `verification_id`, `agreed`)";
   insertQuery += ` VALUES("${name}", "${birth}", "${gender}", "${method}", "${phone_no}", 2, ${verification_id}, ${agreed})`;
   const insertToCustomer = () =>
     new Promise((resolve, reject) => {
@@ -124,6 +123,7 @@ exports.addSocialUser = async (user) => {
 
   const succeed = await insertToCustomer();
 
+  console.log(succeed);
   if (!succeed) {
     return false;
   } else {
@@ -133,7 +133,7 @@ exports.addSocialUser = async (user) => {
 };
 
 async function insertSocialCredential(user) {
-  const token = user.token;
+  const token = user.client_id;
   const name = user.name;
   const phone_no = user.phone_no;
   let selectQuery = `SELECT id FROM customers WHERE name = "${name}" AND phone_no = "${phone_no}"`;

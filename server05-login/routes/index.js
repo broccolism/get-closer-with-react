@@ -77,7 +77,7 @@ router.post("/signin/social", (req, res, next) => {
   try {
     const client_id = req.body.client_id;
     const method = req.body.method;
-
+    console.log(req.body);
     const token = jwt.sign(
       {
         method: method,
