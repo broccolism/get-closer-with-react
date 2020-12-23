@@ -12,15 +12,15 @@ Studying how to use react. Each page's README.md has screenshots.
 ### ✅ 2020.11.16 [page01](https://github.com/broccolism/get-closer-with-react/tree/master/page01-material-ui)
   - with google material ui (animation, responsive card view)
   - auto scrolling on button
-### ▶️ 2020.11.16 - [page02](https://github.com/broccolism/get-closer-with-react/tree/master/page02-with-material-ui-and-firestore)
+### ✅ 2020.11.16 - 11.23 [page02](https://github.com/broccolism/get-closer-with-react/tree/master/page02-with-material-ui-and-firestore)
 ### ✅ 2020.11.17 [page03](https://github.com/broccolism/get-closer-with-react/tree/master/page03-with-next-js)
   - hover and click animation using scale property
   - stack and rotation
-### ▶️ 2020.11.18 [page04](https://github.com/broccolism/get-closer-with-react/tree/master/page04-detail-page)
+### ✅ 2020.11.18 [page04](https://github.com/broccolism/get-closer-with-react/tree/master/page04-detail-page)
   - clone coding: class101 detail page
-### ▶️ 2020.11.25 [page05](https://github.com/broccolism/get-closer-with-react/tree/master/page05-login)
+### ✅ 2020.11.25 - 12.18 [page05](https://github.com/broccolism/get-closer-with-react/tree/master/page05-login)
   - material-ui
   - making social & email login modules using react-router-dom and socail login API
-### ✅2020.12.06 [page07](https://github.com/broccolism/get-closer-with-react/tree/master/page07-voting)
+### ✅2020.12.06 - 12.07 [page07](https://github.com/broccolism/get-closer-with-react/tree/master/page07-voting)
   - material-ui
   - animations
